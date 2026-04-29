@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--TODO:
+    - connect to db
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+    <script src="../js/app.js" defer></script>
+    <script src="../js/register.js" defer></script>
+</head>
+
+<body>
+    <div class="box box-register">
+        <h1>Register</h1>
+
+        <form>
+        <div class="mb-3" style="position: relative;">
+            <input type="text" class="form-control" id="username" placeholder="Username" required>
+            <i class="bi bi-person-circle"></i>
+        </div>
+        <div class="mb-3" style="position: relative;">
+            <input type="password" class="form-control" id="password" placeholder="Password" required>
+            <i class="bi bi-lock-fill"></i>
+        </div>
+        <div class="mb-3" style="position: relative;">
+            <input type="email" class="form-control" id="email" placeholder="Email" required>
+            <i class="bi bi-envelope"></i>
+        </div>
+
+        <button type="submit" class="btn btn-success">Register</button>
+
+        </form>
+        
+        <div>
+            <p>Already have an account? <a href="login.html">Login!</a></p>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+</body>
+
+</html>

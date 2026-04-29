@@ -1,0 +1,99 @@
+/* Image uploader */
+.image-preview-box {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    margin-left: 0.5rem;
+    padding: 1rem;
+
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.image-preview-box img {
+    margin-bottom: 10px;
+    width: 300px;
+}
+
+.image-preview-box input {
+    display: none;
+}
+
+.image-preview-box label {
+    height: 100px;
+    width: 150px;
+    border-radius: 8px;
+    border: 3px dashed rgba(0, 0, 0, 0.5);
+}
+
+/* ------ */
+
+/* Description form */
+.editor-form {
+    border-left: 2px solid rgba(0, 0, 0, 0.5);
+}
+
+.editor-form input {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    margin-right: 1rem;
+}
+
+#album-description {
+    min-height: 500px;
+    flex: 1;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+}
+/* ----- */
+
+/* Toolbar */
+.editor-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+}
+
+.box-editor {
+    background-color: white;
+    border-radius: 0px !important;
+    border: 3px solid black;
+    padding: 20px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ----- */
+
+/* Map */
+
+.map-controls {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.mapSearch {
+    display: flex;
+    justify-content: right;
+    margin-bottom: 10px;
+    gap: 0.5rem;
+}
+
+#map {
+    height: 500px;
+    width: 800px;
+    border: 3px solid black;
+}
+
+.leaflet-container img {
+    border-radius: 0 !important;
+}
+
+/* ------ */

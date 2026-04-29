@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--TODO:
+    - add posibility to add descriptions to images
+    - switch images places
+    - remove images selected
+    - map search bar funtionality - when db is working, add posibility to save location to db and then show it on map
+    - save button (description, date, pictures, pic descriptions, etc.) - when db is working
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editor</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/editor.css">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <!-- Map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+    <!-- Date range picker -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+
+    <script src="../js/editor.js" defer></script>
+    <script src="../js/map.js" defer></script>
+    <script src="../js/app.js" defer></script>
+</head>
+
+<body>
+    <div id="navbar"></div>
+
+    <div class="box">
+
+        <div class="editor-toolbar">
+            <div>
+                <button id="openMap" type="button" class="btn"><i class="bi bi-geo-alt-fill"></i></button>
+                <input type="file" id="imageUploadInput" accept="image/*" multiple style="display:none;">
+                <button id="uploadImageBtn" type="button" class="btn"><i class="bi bi-card-image"></i></button>
+            </div>
+            <div>
+                <button id="boldTextBtn" type="button" class="btn"><i class="bi bi-type-bold"></i></button>
+                <button id="italicTextBtn" type="button" class="btn"><i class="bi bi-type-italic"></i></button>
+                <button id="underlineTextBtn" type="button" class="btn"><i class="bi bi-type-underline"></i></button>
+                <button id="listTaskBtn" type="button" class="btn"><i class="bi bi-list-task"></i></button>
+            </div>
+            <div>
+                <button type="button" class="btn btn-success">Save</button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-3 image-preview-box" id="imagePreviewBox"></div>
+
+            <div class="col editor-form">
+
+                <input type="text" id="Album name" placeholder="Album name" required>
+
+                <input type="text" name="daterange">
+                <input type="date" id="datePickerInput" style="display: none;">
+
+                <div id="album-description" contenteditable="true" placeholder="Add description..."></div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div id="mapOverlay" class="overlay">
+        <div class="overlay-content-box">
+            <div class="map-controls">
+                <button id="closeMap" class="btn btn-success"><i class="bi bi-x-circle"></i></button>
+            </div>
+
+            <div class="mapSearch">
+                <input type="text" placeholder="Search place in map.." name="search">
+                <button id="mapSearch" type="submit" class="btn btn-success"><i class="bi bi-geo-alt-fill"></i></button>
+            </div>
+
+            <div id="map"></div>
+
+        </div>
+    </div>
+
+    <div id="footer"></div>
+</body>
+
+</html>
